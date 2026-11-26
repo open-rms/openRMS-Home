@@ -82,6 +82,7 @@ export const projects: Project[] = [
   {
     folder: "openRMS-Atlas",
     name: "Atlas",
+    artifact: "openrms-atlas",
     repo: "https://github.com/open-rms/openRMS-Atlas",
     group: "services",
     summary:
