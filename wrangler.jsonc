@@ -1,0 +1,12 @@
+// Assets-only Worker: no server code, Cloudflare serves the prerendered build/ directory.
+// Deploy: `pnpm cf:deploy` (then attach openrms.dev as a custom domain in the dashboard or via `routes`).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "openrms-home",
+  "compatibility_date": "2026-11-25",
+  "assets": {
+    "directory": "./build",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
