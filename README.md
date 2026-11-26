@@ -3,7 +3,7 @@
 **Provides:** the openrms.dev landing page: the goal, the three-step path, every openRMS
 project with its status, values, the non-binding request and funding principles. ·
 **Consumes:** nothing at runtime (project list is `src/lib/projects.ts`, mirrored from
-the umbrella `PROJECTS.md`). · **Status:** alpha (not deployed). · **License:** AGPL-3.0-or-later (code),
+the umbrella `PROJECTS.md`). · **Status:** alpha (live at https://openrms.dev). · **License:** AGPL-3.0-or-later (code),
 CC-BY-4.0 (content).
 
 SvelteKit 3, Svelte 5, Tailwind v4 and shadcn-svelte, with the same toolchain and theme as
@@ -16,7 +16,7 @@ pnpm dev        # http://localhost:5174
 pnpm check      # svelte-check
 pnpm build      # static files in build/ (404.html is the not-found page)
 pnpm cf:dev     # build, then serve build/ through wrangler like production
-pnpm cf:deploy  # build + wrangler deploy (needs `wrangler login`), then add openrms.dev as a custom domain
+pnpm cf:deploy  # build + wrangler deploy to openrms.dev (needs `wrangler login`)
 ```
 
 ## Updating

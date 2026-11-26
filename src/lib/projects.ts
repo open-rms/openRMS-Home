@@ -1,4 +1,4 @@
-// The openRMS projects shown on openrms.dev. Mirrors ../PROJECTS.md (the source of truth):
+// The openRMS projects shown on openrms.dev. Mirrors the umbrella PROJECTS.md (the source of truth):
 // update both when a project is added or changes status.
 
 export type Status = "idea" | "planned" | "spec" | "alpha" | "beta" | "stable";
