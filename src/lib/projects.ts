@@ -17,8 +17,12 @@ export interface Project {
   status: Status;
   /** Language or stack, short. */
   stack: string;
-  /** Planned public address. Shown as text, never linked, until it is live. */
+  /** Public address. Shown as text until `live` is true, then linked. */
   host?: string;
+  /** True once `host` resolves and serves. */
+  live?: boolean;
+  /** Public source repository. Set only once the repo is public. */
+  repo?: string;
 }
 
 export const groups: { id: Group; title: string; blurb: string }[] = [
@@ -64,6 +68,7 @@ export const projects: Project[] = [
   },
   {
     folder: "openRMS-Watch",
+    repo: "https://github.com/open-rms/openRMS-Watch",
     name: "Watch",
     artifact: "openrms-watch",
     group: "radio",
@@ -75,30 +80,34 @@ export const projects: Project[] = [
     host: "watch.openrms.dev",
   },
   {
-    folder: "openRMS-Directory",
-    name: "Directory",
-    artifact: "openrms-directory",
+    folder: "openRMS-Atlas",
+    name: "Atlas",
+    repo: "https://github.com/open-rms/openRMS-Atlas",
     group: "services",
     summary:
       "An open, API-first registry of radio email gateways on every mode, with the real waveform each one runs, heartbeats, full dumps and a Winlink-compatible feed that Pat can read.",
     license: "AGPL-3.0+",
     status: "alpha",
     stack: "TypeScript",
-    host: "directory.openrms.dev",
+    host: "atlas.openrms.dev",
+    live: true,
   },
   {
     folder: "openRMS-Site",
-    name: "Directory website",
+    name: "Atlas website",
+    repo: "https://github.com/open-rms/openRMS-Site",
     group: "services",
     summary:
-      "The map, filters, gateway pages and sysop dashboard for the Directory. A pure client of the public API.",
+      "The map, filters, gateway pages and sysop dashboard for Atlas. A pure client of the public API.",
     license: "AGPL-3.0+ / CC-BY-4.0",
     status: "alpha",
     stack: "SvelteKit",
-    host: "directory.openrms.dev",
+    host: "atlas.openrms.dev",
+    live: true,
   },
   {
     folder: "openRMS-Accounts",
+    repo: "https://github.com/open-rms/openRMS-Accounts",
     name: "Accounts",
     artifact: "openrms-accounts",
     group: "services",
@@ -108,6 +117,7 @@ export const projects: Project[] = [
     status: "alpha",
     stack: "TypeScript",
     host: "auth.openrms.dev",
+    live: true,
   },
   {
     folder: "openRMS-Rigs",
@@ -133,10 +143,11 @@ export const projects: Project[] = [
   },
   {
     folder: "openRMS-Spec",
+    repo: "https://github.com/open-rms/openRMS-Spec",
     name: "Spec",
     group: "foundations",
     summary:
-      "The language-neutral contracts every project implements: the Directory API, identity, the Translator control API and the config schema. Written first, so others can integrate without reading our code.",
+      "The language-neutral contracts every project implements: the Atlas API, identity, the Translator control API and the config schema. Written first, so others can integrate without reading our code.",
     license: "CC-BY-4.0 / MPL-2.0",
     status: "spec",
     stack: "OpenAPI, JSON Schema",
@@ -180,7 +191,7 @@ export const statusMeaning: Record<Status, string> = {
   idea: "Direction only",
   planned: "Designed, not started",
   spec: "Contract being written",
-  alpha: "Working code, not deployed",
+  alpha: "Working code, early testing",
   beta: "Public testing",
   stable: "Ready to rely on",
 };

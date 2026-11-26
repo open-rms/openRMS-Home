@@ -36,7 +36,7 @@
       icon: MapPinned,
       step: "Next",
       title: "An open gateway directory",
-      body: "Every gateway on every mode, listed with the waveform it really runs, in a public API anyone can read, mirror or ship in their own distribution.",
+      body: "Atlas lists every gateway on every mode, with the waveform it really runs, in a public API anyone can read, mirror or ship in their own distribution.",
     },
     {
       icon: Network,
@@ -206,7 +206,14 @@
             <Card.Footer class="text-muted-foreground flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs">
               <span>{p.stack}</span>
               <span>{p.license}</span>
-              {#if p.host}<span title="Planned address, not live yet">{p.host}</span>{/if}
+              {#if p.host && p.live}
+                <a href={`https://${p.host}`} class="inline-flex items-center gap-1">{p.host}<ExternalLink class="size-3" /></a>
+              {:else if p.host}
+                <span title="Planned address, not live yet">{p.host}</span>
+              {/if}
+              {#if p.repo}
+                <a href={p.repo} rel="noopener" class="inline-flex items-center gap-1">source<ExternalLink class="size-3" /></a>
+              {/if}
             </Card.Footer>
           </Card.Root>
         {/each}
@@ -287,7 +294,7 @@
     <p class="text-primary font-mono text-sm font-semibold">Get involved</p>
     <h2 class="mt-2 text-3xl font-bold tracking-tight">Early days. Good time to join.</h2>
     <p class="text-muted-foreground text-lg">
-      Everything is in alpha or earlier and nothing is deployed yet. Sysops with open
+      Everything is in alpha or earlier. Atlas and Accounts are live for early testing, and more repositories go public as each project gets ready. Sysops with open
       modems, SDR owners, Rust and TypeScript developers, and emcomm groups with real-world needs are all welcome.
     </p>
   </div>
@@ -299,8 +306,7 @@
       {:else}
         <p class="text-muted-foreground my-0 font-mono text-sm">{GITHUB_PLANNED} · coming soon</p>
       {/if}
-      <p class="text-muted-foreground mt-2 mb-0 text-sm">Repositories are being moved in as each project gets ready.</p>
-    </div>
+          </div>
     <div class="bg-card rounded-xl border p-6">
       <h3 class="text-base">Talk to us</h3>
       <p class="text-muted-foreground my-0 text-sm">Mailing list and chat · coming soon</p>

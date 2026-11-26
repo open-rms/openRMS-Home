@@ -22,6 +22,6 @@ pnpm cf:deploy  # build + wrangler deploy to openrms.dev (needs `wrangler login`
 ## Updating
 
 - Projects and statuses: edit `src/lib/projects.ts` whenever the umbrella `PROJECTS.md` changes.
-- Planned hosts (`directory.`, `auth.`, `rigs.`, `watch.openrms.dev`) are shown as text, not links, until live.
+- Hosts are plain text until `live: true`, then linked; `repo` is set only for public repos.
 - GitHub: the org is `github.com/open-rms` (`GITHUB_URL` in `src/lib/projects.ts`).
 - Funding: principles only until the umbrella `FUNDING.md` is final; no percentages on the page.
