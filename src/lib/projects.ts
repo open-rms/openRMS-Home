@@ -122,6 +122,7 @@ export const projects: Project[] = [
   },
   {
     folder: "openRMS-Rigs",
+    repo: "https://github.com/open-rms/openRMS-Rigs",
     name: "Rigs",
     group: "services",
     summary:
