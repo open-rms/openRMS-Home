@@ -150,6 +150,10 @@ export const projects: Project[] = [
     name: "rigctlWeb",
     artifact: "rigctlweb",
     repo: "https://github.com/open-rms/rigctlweb",
+    download: {
+      href: "https://github.com/open-rms/rigctlweb/releases/latest",
+      label: "for Linux, macOS, Windows",
+    },
     group: "apps",
     summary:
       "A web control panel for Hamlib rigctld that checks, applies and restores Rigs presets through a strict safety allow-list. Runs on the station, even a Pi, and its local page needs no internet or sign-in.",
