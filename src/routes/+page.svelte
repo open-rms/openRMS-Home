@@ -214,6 +214,9 @@
               {#if p.repo}
                 <a href={p.repo} rel="noopener" class="inline-flex items-center gap-1">source<ExternalLink class="size-3" /></a>
               {/if}
+              {#if p.download}
+                <a href={p.download.href} rel="noopener" class="inline-flex items-center gap-1">download {p.download.label}<ExternalLink class="size-3" /></a>
+              {/if}
             </Card.Footer>
           </Card.Root>
         {/each}

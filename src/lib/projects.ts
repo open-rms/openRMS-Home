@@ -23,6 +23,8 @@ export interface Project {
   live?: boolean;
   /** Public source repository. Set only once the repo is public. */
   repo?: string;
+  /** Published release to download, with a short label (e.g. "v0.1.1 pre-release, Linux"). */
+  download?: { href: string; label: string };
 }
 
 export const groups: { id: Group; title: string; blurb: string }[] = [
@@ -69,6 +71,10 @@ export const projects: Project[] = [
   {
     folder: "openRMS-Watch",
     repo: "https://github.com/open-rms/openRMS-Watch",
+    download: {
+      href: "https://github.com/open-rms/openRMS-Watch/releases/tag/v0.1.1",
+      label: "v0.1.1 pre-release, Linux",
+    },
     name: "Watch",
     artifact: "openrms-watch",
     group: "radio",
