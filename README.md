@@ -3,8 +3,8 @@
 **Provides:** the openrms.dev landing page: the goal, the three-step path, every openRMS
 project with its status, values, the non-binding request and funding principles. ·
 **Consumes:** nothing at runtime (project list is `src/lib/projects.ts`, mirrored from
-the umbrella `PROJECTS.md`). · **Status:** alpha (live at https://openrms.dev). · **License:** AGPL-3.0-or-later (code),
-CC-BY-4.0 (content).
+the umbrella `PROJECTS.md`). · **Status:** alpha (live at https://openrms.dev). · **License:** AGPL-3.0-or-later (code, `LICENSE`),
+CC-BY-4.0 (content, `LICENSE-CC-BY-4.0`).
 
 SvelteKit 3, Svelte 5, Tailwind v4 and shadcn-svelte, with the same toolchain and theme as
 openRMS-Site (`#lib` imports, adapter set in `vite.config.ts`). Every page is prerendered to
