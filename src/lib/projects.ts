@@ -131,6 +131,7 @@ export const projects: Project[] = [
     status: "alpha",
     stack: "TypeScript",
     host: "rigs.openrms.dev",
+    live: true,
   },
   {
     folder: "openRMS-Exchange",

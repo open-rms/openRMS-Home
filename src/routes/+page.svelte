@@ -294,7 +294,7 @@
     <p class="text-primary font-mono text-sm font-semibold">Get involved</p>
     <h2 class="mt-2 text-3xl font-bold tracking-tight">Early days. Good time to join.</h2>
     <p class="text-muted-foreground text-lg">
-      Everything is in alpha or earlier. Atlas and Accounts are live for early testing, and more repositories go public as each project gets ready. Sysops with open
+      Everything is in alpha or earlier. Atlas, Accounts and Rigs are live for early testing, and more repositories go public as each project gets ready. Sysops with open
       modems, SDR owners, Rust and TypeScript developers, and emcomm groups with real-world needs are all welcome.
     </p>
   </div>
