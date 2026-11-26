@@ -3,7 +3,7 @@
 
 export type Status = "idea" | "planned" | "spec" | "alpha" | "beta" | "stable";
 
-export type Group = "radio" | "services" | "foundations";
+export type Group = "radio" | "services" | "apps" | "foundations";
 
 export interface Project {
   /** Folder name, e.g. openRMS-Translator. */
@@ -37,6 +37,11 @@ export const groups: { id: Group; title: string; blurb: string }[] = [
     id: "services",
     title: "Online services",
     blurb: "API-first services anyone can use, mirror or run for themselves.",
+  },
+  {
+    id: "apps",
+    title: "Related apps",
+    blurb: "Station-side tools that use openRMS services. They run on your own hardware, no hosted site.",
   },
   {
     id: "foundations",
@@ -139,6 +144,18 @@ export const projects: Project[] = [
     stack: "TypeScript",
     host: "rigs.openrms.dev",
     live: true,
+  },
+  {
+    folder: "rigctlweb",
+    name: "rigctlWeb",
+    artifact: "rigctlweb",
+    repo: "https://github.com/open-rms/rigctlweb",
+    group: "apps",
+    summary:
+      "A web control panel for Hamlib rigctld that checks, applies and restores Rigs presets through a strict safety allow-list. Runs on the station, even a Pi, and its local page needs no internet or sign-in.",
+    license: "MIT",
+    status: "alpha",
+    stack: "Go",
   },
   {
     folder: "openRMS-Exchange",
