@@ -105,7 +105,7 @@ export const projects: Project[] = [
     summary:
       "One sign-in for every openRMS service, with callsign verification, clubs and roles. Self-hosters can point their stack at their own issuer.",
     license: "AGPL-3.0+",
-    status: "spec",
+    status: "alpha",
     stack: "TypeScript",
     host: "auth.openrms.dev",
   },
@@ -115,8 +115,8 @@ export const projects: Project[] = [
     group: "services",
     summary:
       "Crowd-sourced radio settings profiles: how to set up a given rig for a given mode, in Hamlib terms, readable by people and by software.",
-    license: "AGPL-3.0+",
-    status: "planned",
+    license: "AGPL-3.0+ / CC-BY-SA-4.0",
+    status: "alpha",
     stack: "TypeScript",
     host: "rigs.openrms.dev",
   },
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     summary:
       "Reusable crates for B2F, LZHUF, KISS, AGWPE and modem host protocols, with C-ABI wrappers so C, Python and Go apps can use them too.",
     license: "MPL-2.0",
-    status: "planned",
+    status: "alpha",
     stack: "Rust",
   },
   {
