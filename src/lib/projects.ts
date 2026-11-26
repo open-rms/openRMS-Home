@@ -41,7 +41,7 @@ export const groups: { id: Group; title: string; blurb: string }[] = [
   {
     id: "apps",
     title: "Related apps",
-    blurb: "Station-side tools that use openRMS services. They run on your own hardware, no hosted site.",
+    blurb: "Station-side tools that use openRMS services and run on your own hardware.",
   },
   {
     id: "foundations",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     artifact: "rigctlweb",
     repo: "https://github.com/open-rms/rigctlweb",
     download: {
-      href: "https://github.com/open-rms/rigctlweb/releases/latest",
+      href: "https://rigctlweb.openrms.dev/#download",
       label: "for Linux, macOS, Windows",
     },
     group: "apps",
@@ -160,6 +160,8 @@ export const projects: Project[] = [
     license: "MIT",
     status: "alpha",
     stack: "Go",
+    host: "rigctlweb.openrms.dev",
+    live: true,
   },
   {
     folder: "openRMS-Exchange",
